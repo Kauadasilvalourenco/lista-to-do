@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&display=swap');
+
+* {
+    --fonte_titulo: 'Caveat', Arial, Helvetica, sans-serif;
+    --fonte_corpo: 'Amatic SC', Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 97vw;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #F06561, #3C113F)
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid darkred;
+}
+
+h1 {
+    font-family: var(--fonte_titulo);
+    margin-bottom: 100px;
+}
+
+div#conteiner_lista {
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+div#botoes {
+    margin-bottom: auto;
+}
+
+div#botoes button {
+    background-color: transparent;
+    border: none;
+}
