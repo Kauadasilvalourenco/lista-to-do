@@ -16,7 +16,7 @@ function adicionarTarefa() {
 
 
     if (larguraTela < 600) {
-        limiteCaracteres = 40;
+        limiteCaracteres = 30;
     } else if (larguraTela > 600 && larguraTela < 1024) {
         limiteCaracteres = 70;
     } else {
@@ -35,7 +35,7 @@ function adicionarTarefa() {
 
     textoTarefa.textContent = tarefa;
     seletorTarefa.setAttribute("type", "checkbox");
-    seletorTarefa.style.marginRight = "20px";
+    seletorTarefa.style.marginRight = "10px";
 
     seletorTarefa.addEventListener("change", () => {
         if (seletorTarefa.checked) {
