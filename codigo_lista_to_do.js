@@ -16,7 +16,7 @@ function adicionarTarefa() {
 
 
     if (larguraTela < 600) {
-        limiteCaracteres = 50;
+        limiteCaracteres = 40;
     } else if (larguraTela > 600 && larguraTela < 1024) {
         limiteCaracteres = 70;
     } else {
