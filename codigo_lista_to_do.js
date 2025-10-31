@@ -7,16 +7,31 @@ botaoAdicionarTarefa.addEventListener("click", adicionarTarefa);
 botaoExcluirTarefa.addEventListener("click", excluirTarefa);
 
 function adicionarTarefa() {
-    let tarefa = prompt("Digite a tarefa que deseja adicionar");
+    const larguraTela =window.innerWidth;
+    let limiteCaracteres = null;
+    let tarefa = prompt(`Digite a tarefa que deseja adicionar`);
+    let itemLista = document.createElement("li")
+    let seletorTarefa = document.createElement("input");
+    let textoTarefa = document.createElement("span");
 
-    if (tarefa == "") {
+
+    if (larguraTela < 600) {
+        limiteCaracteres = 50;
+    } else if (larguraTela > 600 && larguraTela < 1024) {
+        limiteCaracteres = 70;
+    } else {
+        limiteCaracteres = 100;
+    }
+
+    if (tarefa.trim() == "") {
         alert("[ERRO] O campo de tarefa não pode estar vazio!")
         return;
     }
 
-    let itemLista = document.createElement("li")
-    let seletorTarefa = document.createElement("input");
-    let textoTarefa = document.createElement("span");
+    if (tarefa.length > limiteCaracteres) {
+        alert(`[ERRO] A tarefa é muito longa para esta tela. | Limite: ${limiteCaracteres} caracteres`)
+        return;
+    }
 
     textoTarefa.textContent = tarefa;
     seletorTarefa.setAttribute("type", "checkbox");
