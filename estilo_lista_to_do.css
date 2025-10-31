@@ -21,7 +21,6 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid darkred;
 }
 
 h1 {
@@ -30,8 +29,15 @@ h1 {
 }
 
 div#conteiner_lista {
+    display: flex;
     width: 600px;
     margin-bottom: 50px;
+    font-family: var(--fonte_corpo);
+    font-size: 1.8em;
+}
+
+div#conteiner_lista ul {
+    list-style: none;
 }
 
 div#botoes {
